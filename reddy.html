@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,13 @@
   <title>My Resume</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
   <style>
-    *{
+    * {
       box-sizing: border-box;
       font-family: 'Open Sans', sans-serif;
     }
-    body, html{
+
+    body,
+    html {
       width: 100%;
       height: 100%;
       padding: 0;
@@ -19,103 +22,125 @@
       font-size: 15px;
       background: #f1f1f1;
     }
-    .main-container{
+
+    .main-container {
       width: 70%;
       margin: 0 auto;
       background: #fff;
       padding: 15px;
       position: relative;
     }
-    .inline-block{
+
+    .inline-block {
       display: inline-block;
     }
-    .col-8{
+
+    .col-8 {
       width: 65.64%;
       display: inline-block;
       margin-right: 1.5%;
       vertical-align: top;
     }
-    .col-10{
+
+    .col-10 {
       width: 80%;
       margin-left: 20%;
     }
-    .col-4{
+
+    .col-4 {
       width: 32.32%;
       display: inline-block;
       vertical-align: top;
     }
-    .col-1{
+
+    .col-1 {
       width: 8.33%;
     }
-    .col-2{
+
+    .col-2 {
       width: 15%;
       float: left;
     }
-    .col-3{
+
+    .col-3 {
       width: 24.99%;
     }
-    .col-5{
+
+    .col-5 {
       width: 41.65%;
     }
-    .col-6{
+
+    .col-6 {
       width: 49.98%;
     }
-    .col-7{
+
+    .col-7 {
       width: 58.31;
     }
-    .clear{
+
+    .clear {
       clear: both;
     }
-    header{
+
+    header {
       border-bottom: 6px solid #333;
       width: 100%;
       padding: 15px 0;
       float: left;
     }
-    main{
+
+    main {
       padding: 15px 0;
       width: 100%;
     }
-    .name{
+
+    .name {
       font-size: 2em;
       font-weight: 800;
       text-transform: uppercase;
     }
-    .position{
+
+    .position {
       font-size: 1.2em;
       color: #666;
     }
-    .address span{
+
+    .address span {
       display: block;
       text-align: right;
       color: #666;
     }
-    .section-content{
+
+    .section-content {
       position: relative;
       padding: 0.5em;
       margin: 0.5em 0;
     }
-    .section-title{
-      font-weight: 800;
-      font-size: 1.4em;
+
+    .section-title {
+      font-weight: 700;
+      font-size: 1.2em;
       border-bottom: 2px solid #333;
       text-transform: uppercase;
       padding-bottom: 0.15em;
       margin-bottom: 0.15em;
     }
-    .dates span{
+
+    .dates span {
       display: block;
       font-size: 1em;
       font-weight: 600;
     }
-    .dates span:nth-child(2){
+
+    .dates span:nth-child(2) {
       width: 3px;
       height: 15px;
       margin: 0.4em auto;
       background: #333;
       position: relative;
     }
-    .dates span:nth-child(2):after{
+
+    .dates span:nth-child(2):after {
       position: absolute;
       content: '';
       bottom: -5px;
@@ -126,12 +151,14 @@
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
     }
-    .divider{
+
+    .divider {
       position: absolute;
       left: 15.5%;
       height: 100%;
     }
-    .divider .border{
+
+    .divider .border {
       width: 4px;
       background: #333;
       height: calc(100% - 25px);
@@ -139,37 +166,44 @@
       margin: 0 auto;
       display: block;
     }
-    .divider .sign{
+
+    .divider .sign {
       display: block;
       font-weight: 800;
       font-size: 1.2em;
       height: 25px;
     }
-    .institute{
-      font-size: 1.2em;
-      font-weight: 800;
+
+    .institute {
+      font-size: 1.1em;
+      font-weight: 700;
       margin-bottom: 0.4em;
       text-transform: uppercase;
       color: #000;
     }
-    .role{
+
+    .role {
       font-size: 1em;
       font-weight: 600;
       text-transform: capitalize;
-      color: rgba(0, 164, 184, 1);;
+      color: #009688;
+      ;
     }
-    .content{
+
+    .content {
       font-size: 1em;
       font-weight: 400;
       color: #333;
     }
-    #sectionContent, #sectionSummary{
+
+    #sectionContent,
+    #sectionSummary {
       padding: 0.65em;
     }
-    .skill-name{
 
-    }
-    .skill-bar{
+    .skill-name {}
+
+    .skill-bar {
       display: block;
       position: relative;
       width: 90%;
@@ -177,71 +211,131 @@
       margin-top: 0.4em;
       background: #f5f5f5;
     }
-    .skill-bar:after{
+
+    .skill-bar:after {
       position: absolute;
       height: 8px;
       content: '';
-      background: rgba(0, 164, 184, 1);
+      background: #009688;
     }
-    .skill-bar.bar-50:after{
+
+    .skill-bar.bar-50:after {
       width: 80%;
     }
-    .skill-bar.bar-80:after{
+
+    .skill-bar.bar-80:after {
       width: 80%;
     }
-    .skill-bar.bar-90:after{
+
+    .skill-bar.bar-60:after {
+      width: 60%;
+    }
+
+    .skill-bar.bar-70:after {
+      width: 70%;
+    }
+
+    .skill-bar.bar-90:after {
       width: 90%;
     }
-    .skill-bar.bar-100:after{
+
+    .skill-bar.bar-100:after {
       width: 100%;
     }
-    .section{
+
+    .section {
       margin-bottom: 1em;
     }
-    .section.skills .content{
+
+    .section.skills .content {
       margin: 0.65em 0;
       color: #333;
       font-weight: 600;
       text-transform: capitalize;
     }
-    .section.skills .content:last-child{
+
+    .section.skills .content:last-child {
       margin-bottom: 0;
     }
+
     #sectionContent .section:last-child,
-    #sectionSummary .section:last-child{
+    #sectionSummary .section:last-child {
       margin-bottom: 0;
     }
-    #sectionSummary li{
+
+    #sectionSummary li {
       list-style-type: circle;
       padding: 0.5em 0;
       font-weight: 600;
       text-transform: capitalize;
       color: #333;
     }
-    #sectionContent li{
+
+    #sectionContent li {
       list-style-type: none;
     }
-    #sectionSummary li a{
+
+    #sectionSummary li a {
       color: rgba(0, 164, 184, 1)
+    }
+    #sectionContent .section-content.certification {
+      padding: 0;
+    }
+    #sectionSummary .personal li {
+      list-style-type: none;
+      padding: 0;
+      width: calc(100% - 20px);
+      margin-left: 20px;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    #sectionSummary .personal li::before {
+      width: 4px;
+      display: inline-block;
+      height: 4px;
+      left: -20px;
+      top: 10px;
+      position: absolute;
+      border-radius: 50%;
+      content: '';
+      border: 1px solid rgba(0,0,0,0.75);
+    }
+    #sectionContent .content.certification li {
+      width: calc(100% - 20px);
+      margin-left: 20px;
+      position: relative;
+      margin-bottom: 5px;
+    }
+    #sectionContent .content.certification li::before {
+      width: 5px;
+      display: inline-block;
+      height: 5px;
+      left: -20px;
+      top: 10px;
+      position: absolute;
+      border-radius: 50%;
+      content: '';
+      background: rgba(0,0,0,1);
     }
   </style>
 </head>
+
 <body>
   <div class="main-container">
     <header>
       <div class="col-8 inline-block">
         <div class="name">
-          Dasari Sridhar
+          Salini V S
         </div>
         <div class="position">
-          Senior Frontend Developer
+          Marketing & Communications Specialist
         </div>
       </div>
       <div class="col-4 inline-block">
         <div class="address">
-          <span>Uppal, Hyderabad</span>
-          <span>reddysridhar53@gmail.com</span>
-          <span>+91 9550246233</span>
+          <span>Bangalore</span>
+          <span>shaluvs22@gmail.com</span>
+          <span>+91 9741248036</span>
         </div>
       </div>
     </header>
@@ -250,8 +344,8 @@
         <div class="" id="sectionContent"></div>
       </div>
       <div class="col-4">
-          <div class="" id="sectionSummary"></div>
-      </div>  
+        <div class="" id="sectionSummary"></div>
+      </div>
     </main>
     <footer>
 
@@ -259,122 +353,131 @@
   </div>
   <script>
     const sectionData = {
-      'sections' : [
-        {
-          'education' : [
-            {
-              'role': 'Computer Engineering',
-              'from': 'Aug 2009',
-              'to': 'June 2013',
-              'content': '7.68 CGPA',
-              'institute': 'IIIT D&M KANCHEEPURAM'
+      'sections': [{
+          'education': [{
+              'role': 'MBA, HR & Marketing',
+              'from': 'Aug 2017',
+              'to': 'June 2015',
+              'content': '8.4 CGPA',
+              'institute': 'DAYANAND SAGAR INSTITUTE'
             },
             {
-              'role': 'MPC (Maths, Physics and Chemistry)',
+              'role': 'Computer Science & Engineering',
+              'from': 'Aug 2015',
+              'to': 'June 2011',
+              'content': '65%',
+              'institute': 'JYOTHI INSTITUTE OF TECHNOLOGY'
+            },
+            {
+              'role': 'PCMB (Physics, Chemistry, Maths & Biology)',
+              'to': 'May 2011',
+              'from': 'June 2009',
+              'content': '56%',
+              'institute': 'JKV Composite & Pre University College'
+            },
+            {
+              'role': 'SSLC Board',
               'to': 'May 2009',
-              'from': 'June 2007',
-              'content': '96%',
-              'institute': 'SRI CHAITANYA JUNIOR KALASALA'
-            },
-            {
-              'role': 'SSC Board',
-              'to': 'May 2007',
               'from': 'Aug 1998',
-              'content': '86%',
-              'institute': 'SACRED HEART HIGH SCHOOL'
+              'content': '82%',
+              'institute': 'BANGALORE HIGHER SECONDARY SCHOOL'
             }
           ],
-          'work-experince' : [
-            {
-              'role': 'Senior Frontend developer',
-              'from': 'Jan 2018',
+          'work-experince': [{
+              'role': 'Marketing and Communication Specialist',
+              'from': 'Feb 2018',
               'to': 'present',
-              'content': '<li>My primary roles include building, managing and monitoring frontend application accross User Dasboard, Payment System etc.</li><li>Significantly improved the performance of Web application accross all the systems.</li><li>Working closely with Product Manager and Design team right from the Ideation to Deployment.</li><li>Exploring the leadership qualities in me and putting them to use by managing a small section of the product team.</li>',
+              'content': `<li>Generating reports on the campaigns and events planned by the company.</li>
+                          <li>Setting up campaigns on WebEngage (end-to-end process of creating the flow as per the communication plans of various events/campaigns).</li>
+                          <li>Worked on building html-based email templates for Campaings, Promotions etc.</li>
+                          <li>Driving external and internal events and running them end-to-end.</li>
+                          <li>Market research on various marketing tools (before deciding on WebEngage).</li>
+                          <li>Worked on streamlining the transition process from Marketo to WebEngage.</li>`,
               'institute': 'shawacademy'
             },
             {
-              'role': 'Frontend developer',
-              'from': 'Aug 2015',
+              'role': 'Operations Analyst',
+              'from': 'Sep 2017',
               'to': 'Dec 2017',
-              'content': '<li>Worked effectively with design teams to ensure software solutions elevated client side experience.</li><li>Explored various emerging JavaScript technologies such as AngularJs and BackboneJs for future product and feature development.</li><li>Developed the chat system by using Firebase as Database in Angular2 framework.</li><li>Developed Hybrid Mobile app using Ionic v1 Framework and angularJs.</li>',
-              'institute': 'yourdost'
-            },
-            {
-              'role': 'Frontend developer',
-              'from': 'Oct 2014',
-              'to': 'Aug 2015',
-              'content': '<li>Proposed technical feasibility solutions for new functional designs and suggested options for performance improvement of technical objects.</li><li>Provided methodologies for object-oriented software development. Recommended architectural improvements, design solutions and integrationsolutions.</li><li>Developed working prototypes from UI designs for cross-platform devices. Made heavy use of Chrome Developer Tools + Firebug to ensure front-end code and assets were optimised and high-quality.</li>',
-              'institute': 'VIOLETSTREET'
-            },
-            {
-              'role': 'Fullstack Developer',
-              'from': 'Aug 2013',
-              'to': 'Oct 2014',
-              'content': '<li>Integrated responsive UI designs into PHP framework for web and mobile using HTML5, CSS3 and jQuery / JavaScript.Collaborated with team on implementing new features and UX in an Agile environment.</li><li>Developed working prototypes from UI designs for cross-platform devices. Made heavy use of Chrome Developer Tools + Firebug to ensure front-end code and assets were optimised and high-quality.</li>',
-              'institute': 'VISIRAM SOLUTIONS PVT LTD'
+              'content': `<li>Timely execution/escalation (of tasks), and communicating with various operations teams on the status of the tasks.</li>
+                          <li>Analyzing and resolving exceptions, and escalating risk items to the management and the business.</li>
+                          <li>Prioritizing client-sensitive products and making timely arrangements to execute them seamlessly</li>
+                          <li>Coordinating with different internal teams and providing them information as to when and why tasks need to be prioritized</li>
+                          <li>Training team members on the project and assigning them tasks</li>
+                          <li>Generating tasks using tools and uploading the documents that need to be reviewed.</li>
+                          <li>Monitoring the inventory creation</li>`,
+              'institute': 'GOLDMAN SACHS (on rolls of Collabera)'
             }
-          ]
+          ],
+          'internship': [{
+              'role': 'Organization study and Internship Program',
+              'from': '',
+              'to': '',
+              'content': `As the part of Intership Program, I had the opportunity to study the structure and operations of The DTDC Express Limited,
+              one of the leading courier service companies. 
+              I was assigned the responsibility of preparing and sending the daily newsletter to employees across all branches of DTDC in South India. 
+              With my engineering background, I was able to leverage my technical skills to bring in innovation in the way the stories in the newsletter were presented. 
+              This was widely appreciated across the company.`,
+              'institute': ''
+            }
+          ],
+          'project': [{
+              'role': 'A study on Performance Management System of DTDC Express Ltd.',
+              'from': '',
+              'to': '',
+              'content': '<li>In this project, I analyzed the Performance Management System of DTDC Express Ltd through a questionnaire. The data was systematically analyzed using descriptive statistics and Regression analysis. SPSS was used for this analysis. Based on the results of the regression analysis, I came up with a list of suggestions and recommendations which were given to the performance management team. They are planning to act on a few suggestions and see how it improves the process.</li>',
+              'institute': ''
+            }
+          ],
+          'certification course': [{
+            'role': 'Business Analytics',
+            'from': '',
+            'to': '',
+            'content': `<li>Microsoft Excel for testing and analysis</li>
+                        <li>R programming language and software environment for statistical computing, data analytics, scientific
+                        research, graphics representation and reporting</li>
+                        <li>Visual Basic Application for Excel – customize Excel applications, automate all sort of Excel tasks</li>
+                        <li>SPSS program to handle large amount of data and perform data entry and analysis, and to create
+                        tables and graphs</li>`,
+            'institute': ''
+          }]
         },
         {
-          'professional-summary' : [
+          'professional-summary': [{
+            'content': `  An innovative and competent professional with the 
+                          ability to adapt and tackle challenging scenarios, 
+                          while being aware of the roles and responsibilities, 
+                          and professional boundaries `
+          }],
+          'technical-skills': [{
+              'percent': 90,
+              'label': '<strong>Platform:</strong> Windows, Linux'
+            },
             {
-              'content' : 'A Web Developer specialising in front end development. Experienced with all stages of the development cycle for dynamic web projects. Excellent analytical and problem solving skills. Works well under pressure and consistently meets deadlines and targets while delivering high quality work. Results-oriented software engineering professional with more than 5 years of experience in the field.'
+              'percent': 60,
+              'label': '<strong>Languages:</strong> C, C++, HTML, DBMS, JAVA and R programming (basics)'
+            },
+            {
+              'percent': 80,
+              'label': '<strong>Tools:</strong> Visual studio, Excel, Microsoft Office, SPSS (basics)'
             }
           ],
-          'skills' : [
-            {
-              'percent' : 90,
-              'label' : 'javascript'
-            },
-            {
-              'percent' : 90,
-              'label' : 'AngularJs'
-            },
-            {
-              'percent' : 90,
-              'label' : 'Angular 2 & 4'
-            },
-            {
-              'percent' : 100,
-              'label' : 'HTML & CSS'
-            },
-            {
-              'percent' : 90,
-              'label' : 'jQuery'
-            },
-            {
-              'percent' : 80,
-              'label' : 'Wordpress, PHP & MySql'
-            },
-            {
-              'percent' : 80,
-              'label' : 'NodeJs'
-            },
-            {
-              'percent' : 50,
-              'label' : 'ReactJs & Redux/Redux-saga'
-            }
-          ],
-          'interests' : [
-            {
-              'content' : '<li>cricket</li><li>Drums</li><li>Reading/Writing on Quora</li><li>Swimming</li><li>Movies & TV series</li>' 
-            }
-          ],
-          'motto-in-life' : [
-            {
-              'content' : 'I love serving society and desire to use my technical and analytical skills to work on something that will contribute to the benefit of the society. I yearn to make an impact on the society.'
-            }
-          ],
-          'Links' : [
-            {
-              'content' : '<li><a href="https://github.com/reddysridhar53" target="_blank">GitHub</a></li><li><a href="https://www.linkedin.com/in/sridhar-reddy-47b91940/" target="_blank">Linkedin</a></li><li><a href="https://www.quora.com/profile/Sridhar-Reddy-6" target="_blank">Quora</a></li>'
-            }
-          ]
+          'platforms-worked-on': [{
+            'content': `<li>Marketo</li><li>WebEngage</li><li>Zoho</li><li>Netcore</li><li>Salesforce</li><li>Tableau</li><li>Mailchimp</li>`
+          }],
+          'expertise': [{
+            'content': '<li>Email automation process</li><li>Reporting and analysis</li><li>Campaign management</li><li>Stakeholder management</li><li>Project coordination</li><li>Vendor management</li><li>Design conceptualization</li><li>PowerPoint presentation</li>'
+          }],
+          'personal-skills': [{
+            'content': '<li>Result-driven and aggressive with high personal and carrier goals</li><li>Exceptional time management skills</li><li>Ability to think and view from the client perspective</li><li>Ability to work independently with minimum supervision</li><li>Excellent presentation and public- speaking skills</li>'
+          }]
         }
       ]
     }
-    let template = '', innerTemplate = '';
-    let summaryTemplate = '', innerSummaryTemplate = '';
+    let template = '',
+      innerTemplate = '';
+    let summaryTemplate = '',
+      innerSummaryTemplate = '';
     const renderMainData = () => {
       const sectionsObj = sectionData.sections[0];
       for (const property in sectionsObj) {
@@ -382,35 +485,45 @@
           const title = property.split('-').join(' ');
           innerTemplate = '';
           const innerSection = sectionsObj[property];
-          innerSection.forEach( (data) => {
-            const to = data.to;
-            const from = data.from;
-            const institute = data.institute;
-            const content = data.content;
-            const role = data.role;
+          innerSection.forEach((data) => {
+            const to = data.to || '';
+            const from = data.from || '';
+            const institute = data.institute || '';
+            const content = data.content || '';
+            const role = data.role || '';
             if (to && from) {
-              innerTemplate += `<div class="section-content">
-                <div class="dates col-2">
-                  <span class="to">${to}</span>
-                  <span class="arrow"></span>
-                  <span class="from">${from}</span>
-                </div>
-                <div class="divider">
-                  <span class="sign">+</span>
-                  <span class="border"></span>
-                </div>
-                <div class="content col-10">
-                  <div class="institute">${institute}</div>
-                  <div class="role">${role}</div>
-                  <div class="content">${content}</div>
-                </div>
+              innerTemplate +=
+                `<div class="section-content">
+                  <div class="dates col-2">
+                    <span class="to">${to}</span>
+                    <span class="arrow"></span>
+                    <span class="from">${from}</span>
+                  </div>
+                  <div class="divider">
+                    <span class="sign">+</span>
+                    <span class="border"></span>
+                  </div>
+                  <div class="content col-10">
+                    <div class="institute">${institute}</div>
+                    <div class="role">${role}</div>
+                    <div class="content">${content}</div>
+                  </div>
               </div>`;
             } else {
-              innerTemplate += `<div class="section-content">
-                <div class="content col">
-                  <div class="content">${content}</div>
-                </div>
-              </div>`;
+              if(title === 'project' || title === 'internship') {
+                innerTemplate += `<div class="content project">
+                    <div class="institute">${institute}</div>
+                    <div class="role">${role}</div>
+                    <div class="content">${content}</div>
+                  </div>`
+              } else {
+                innerTemplate +=
+                  `<div class="section-content ${title}">
+                    <div class="content col">
+                      <div class="content ${title}">${content}</div>
+                    </div>
+                  </div>`
+              }
             }
           });
           template += `<div class="section"><div class="section-title">${title}</div>${innerTemplate}</div>`;
@@ -426,10 +539,11 @@
           const title = summary.split('-').join(' ');
           innerSummaryTemplate = '';
           const innerSummary = summaryObj[summary];
-          innerSummary.forEach( (data) => {
+          innerSummary.forEach((data) => {
             const content = data.content;
-            if (summary === 'skills') {
-              innerSummaryTemplate += `<div class="content">
+            if (summary === 'technical-skills') {
+              innerSummaryTemplate +=
+                `<div class="content">
                 <span class="skill-name">${data.label}</span>
                 <span class="skill-bar bar-${data.percent}" data-length=${data.percent}><span>
                 </div>`;
@@ -437,7 +551,8 @@
               innerSummaryTemplate += `<div class="content">${content}</div>`;
             }
           });
-          summaryTemplate += `<div class="section ${title}"><div class="section-title">${title}</div>${innerSummaryTemplate}</div>`;
+          summaryTemplate +=
+            `<div class="section ${title}"><div class="section-title">${title}</div>${innerSummaryTemplate}</div>`;
         }
       }
       const summaryDiv = document.getElementById('sectionSummary');
@@ -445,6 +560,7 @@
     }
     renderMainData();
     renderSummaryData();
-  </script>  
+  </script>
 </body>
+
 </html>
